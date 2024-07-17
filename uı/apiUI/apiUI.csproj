@@ -30,6 +30,7 @@
     <ProjectReference Include="..\..\api\apiSwagger\apiSwagger.csproj" />
     <ProjectReference Include="..\..\api\businessLayer\businessLayer.csproj" />
     <ProjectReference Include="..\..\api\dataAccessLayer\dataAccessLayer.csproj" />
+    <ProjectReference Include="..\..\api\DtoLayer\DtoLayer.csproj" />
     <ProjectReference Include="..\..\api\entityLayer\entityLayer.csproj" />
   </ItemGroup>
 
