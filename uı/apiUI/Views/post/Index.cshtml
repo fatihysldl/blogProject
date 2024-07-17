@@ -1,0 +1,51 @@
+﻿@model List<postModelView>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Posts</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Post Header</th>
+            <th>Post Date</th>
+            <th>Post Description</th>
+            <th>Recipe Header</th>
+            <th>Recipe Value</th>
+            <th>Recipe Ingredients</th>
+            <th>Image Path</th>
+            <th>Author</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.postId</td>
+                <td>@i.postHeader</td>
+                <td>@i.postDate</td>
+                <td>@i.postDescription</td>
+                <td>@i.RecipeHeader</td>
+                <td style="max-width: 300px; overflow-x: auto;">
+                    <a href="#" class="recipe-detail-link" data-recipe-value="@i.RecipeValue" data-toggle="modal" data-target="#recipeDetailModal">
+                        @i.RecipeValue
+                    </a>
+                </td>
+                <td>@i.RecipeIngredients</td>
+                <td>@i.ImagePath</td>
+                <td>@i.authorId</td>
+                <td>
+                    <a href="/post/deletePost/@i.postId" class="btn btn-warning">Delete</a>
+                    <a href="/post/updatePost/@i.postId" class="btn btn-success" style="margin-left:2px;">Edit Post</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/post/addPost" class="btn btn-warning">Add Post</a>
+

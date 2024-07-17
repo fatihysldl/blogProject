@@ -1,0 +1,35 @@
+﻿@model apiUI.Models.author.addAuthorModelView
+@{
+    ViewData["Title"] = "addAuthor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>add Author</h1>
+@if (ViewBag.ModelStateErrors != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @foreach (var error in ViewBag.ModelStateErrors)
+        {
+            if (!error.Contains("The value '' is invalid."))
+            {
+                <p>@error</p>
+            }
+        }
+    </div>
+}
+@using (Html.BeginForm("addAuthor", "author", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Auhtor Name</label>
+        @Html.TextBoxFor(i => i.authorName, new { @class = "form-control" })
+        <br />
+        <label>Auhtor Mail</label>
+        @Html.TextBoxFor(i => i.mail, new { @class = "form-control" })
+        <br />
+        <label>Auhtor Password</label>
+        @Html.TextBoxFor(i => i.password, new { @class = "form-control" })
+        @Html.HiddenFor(i => i.authorId)
+        <button class="btn btn-primary" style="margin-top:5px;">Add Author</button>
+    </div>
+}
+

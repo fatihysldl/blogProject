@@ -1,0 +1,25 @@
+﻿@model List<apiUI.Models.post.postModelView>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_userLayout.cshtml";
+}
+
+@foreach (var i in Model)
+{
+    <!-- Post preview-->
+    <div class="post-preview">
+
+        <a href="~/userPostDetail/Index/@i.postId">
+            <h2 class="post-title">@i.RecipeHeader</h2>
+            <h3 class="post-subtitle">@i.postDescription</h3>
+        </a>
+
+
+        <p class="post-meta">
+            Yazar: <a href="#!">@i.authorId</a> Tarih: @i.postDate
+        </p>
+        <!-- Markdown veya HTML içeriği doğru şekilde işlemek için aşağıdaki kullanımı ekleyin -->
+        @Html.Raw(i.RecipeValue)
+    </div>
+    <hr class="my-4" />
+}

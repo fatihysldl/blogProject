@@ -1,0 +1,58 @@
+﻿@model apiUI.Models.post.addPostModelView
+@{
+    ViewData["Title"] = "addPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add Post</h1>
+@using (Html.BeginForm("addPost", "post", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Post Header</label>
+        @Html.TextBoxFor(i => i.postHeader, new { @class = "form-control" })
+        <br />
+        <label>Post Date</label>
+        @Html.TextBoxFor(i => i.postDate, new { @class = "form-control" })
+        <br />
+        <label>Post Description</label>
+        @Html.TextBoxFor(i => i.postDescription, new { @class = "form-control" })
+        <br />
+        <label>Recipe Header</label>
+        @Html.TextBoxFor(i => i.RecipeHeader, new { @class = "form-control" })
+        <br />
+        <label>Recipe Value</label>
+        @Html.TextAreaFor(i => i.RecipeValue, new { @class = "form-control", @id = "RecipeValue" })
+        <br />
+        <label>Recipe Ingredients</label>
+        @Html.TextBoxFor(i => i.RecipeIngredients, new { @class = "form-control" })
+        <br />
+        <label>Image Path</label>
+        @Html.TextBoxFor(i => i.ImagePath, new { @class = "form-control" })
+        <br />
+        <label>Author</label>
+        @* @Html.DropDownListFor(i => i.authorId, (IEnumerable<SelectListItem>)ViewBag.authorValue, "Select Author", new { @class = "form-control" }) *@
+        @Html.DropDownListFor(i => i.authorId, (List<SelectListItem>)ViewBag.authorValue, "Select Author", new { @class = "form-control" })
+
+
+        @Html.HiddenFor(i => i.postId)
+        <button type="submit" class="btn btn-primary" style="margin-top:5px;">Add Post</button>
+    </div>
+}
+
+<!-- TinyMCE için JavaScript kodları -->
+<script src="https://cdn.tiny.cloud/1/nu5168ywotc9xr56nrf5e61kebwm1to6uj1xh6yr15613vt0/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: 'textarea#RecipeValue',
+        height: 400,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | \
+                                  alignleft aligncenter alignright alignjustify | \
+                                  bullist numlist outdent indent | removeformat | help'
+    });
+</script>

@@ -1,0 +1,23 @@
+﻿@await Html.PartialAsync("~/views/adminLayoutModelView/head.cshtml")
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        @await Html.PartialAsync("~/views/adminLayoutModelView/navbar.cshtml")
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Begin Page Content -->
+                <div class="container-fluid" style="margin-top:20px;">
+                    @RenderBody()
+                </div>
+                <!-- End of Main Content -->
+            </div>
+        </div>
+        @await Html.PartialAsync("~/views/adminLayoutModelView/scripts.cshtml")
+        @RenderSection("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+﻿@model List<authorModelView>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Author Name</th>
+        <th>Author Mail</th>
+        <th>Author Password</th>
+        <th>Edit</th>
+    </tr>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+
+                <td>@i.authorId</td>
+                <td>@i.authorName</td>
+                <td>@i.mail</td>
+                <td>@i.password</td>
+                <td><a href="/author/deleteAuthor/@i.authorId" class="btn btn-warning">Delete</a> <a href="/author/updateAuthor/@i.authorId" class="btn btn-success" style="margin-left:2px;">Edit Author</a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a href="~/author/addAuthor" class="btn btn-primary">Add</a>

@@ -1,0 +1,33 @@
+﻿@model List<apiUI.Models.post.postModelView>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_userLayout.cshtml";
+}
+
+@foreach (var i in Model)
+{
+    <!-- Post preview-->
+    <div class="post-preview">
+        @if (i.postId != null)
+        {
+            <a href="~/userPostDetail/Index/@i.postId">
+                <h2 class="post-title">@i.postHeader</h2>
+                <h3 class="post-subtitle">@i.postDescription</h3>
+            </a>
+
+        }
+        else
+        {
+            <h2 class="post-title">@i.postHeader (Recipe boş)</h2>
+            <h3 class="post-subtitle">@i.postDescription</h3>
+        }
+        <p class="post-meta">
+            Yazar: 
+            <a href="#!">Tarih: </a>
+            @i.postDate
+        </p>
+    </div>
+    <hr class="my-4" />
+}
+
+

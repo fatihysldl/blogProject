@@ -1,0 +1,49 @@
+﻿@model apiUI.Models.post.updatePostModelView
+@{
+    ViewData["Title"] = "updatePost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Update Post</h1>
+@if (ViewBag.ModelStateErrors != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @foreach (var error in ViewBag.ModelStateErrors)
+        {
+            if (!error.Contains("The value '' is invalid."))
+            {
+                <p>@error</p>
+            }
+        }
+    </div>
+}
+@using (Html.BeginForm("updatePost", "post", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Post Header</label>
+        @Html.TextBoxFor(i => i.postHeader, new { @class = "form-control" })
+        <br />
+        <label>Post Date</label>
+        @Html.TextBoxFor(i => i.postDate, new { @class = "form-control" })
+        <br />
+        <label>Post Description</label>
+        @Html.TextBoxFor(i => i.postDescription, new { @class = "form-control" })
+        <br />
+        <label>Recipe Header</label>
+        @Html.TextBoxFor(i => i.RecipeHeader, new { @class = "form-control" })
+        <br />
+        <label>Recipe Value</label>
+        @Html.TextBoxFor(i => i.RecipeValue, new { @class = "form-control" })
+        <br />
+        <label>Recipe Ingredients</label>
+        @Html.TextBoxFor(i => i.RecipeIngredients, new { @class = "form-control" })
+        <br />
+        <label>ImagePath</label>
+        @Html.TextBoxFor(i => i.ImagePath, new { @class = "form-control" })
+
+        <label>Auhtor</label>
+        @Html.TextBoxFor(i => i.authorId, new { @class = "form-control" })
+        @Html.HiddenFor(i => i.postId)
+        <button class="btn btn-primary" style="margin-top:5px;">update Post</button>
+    </div>
+}
