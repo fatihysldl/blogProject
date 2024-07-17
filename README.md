@@ -21,3 +21,6 @@ Kullanılan Teknolojiler:
 7) Areas
 Bu proje, kullanıcıların yemek tariflerini keşfetmelerini ve paylaşmalarını sağlayan modern bir web uygulamasıdır.
 
+## Uygulamadan Bazı Fotoğraflar
+
+![swagger](https://github.com/user-attachments/assets/d96554cf-5692-450e-bb11-8eee9ad6b074)
