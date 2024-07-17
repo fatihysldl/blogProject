@@ -24,3 +24,9 @@ Bu proje, kullanıcıların yemek tariflerini keşfetmelerini ve paylaşmaların
 ## Uygulamadan Bazı Fotoğraflar
 
 ![swagger](https://github.com/user-attachments/assets/d96554cf-5692-450e-bb11-8eee9ad6b074)
+
+![admin Paneli](https://github.com/user-attachments/assets/1d5c1b7c-f362-4434-b180-2a6c0fc30aaf)
+![Ekran görüntüsü 2024-07-17 144248](https://github.com/user-attachments/assets/1c42f284-2d2c-429d-a0a6-cb4b5b559748)
+![user Anasayfa](https://github.com/user-attachments/assets/2eeddc47-8f93-4762-932f-cb0e1fb24c79)
+![Ekran görüntüsü 2024-07-17 144750](https://github.com/user-attachments/assets/9f4b5572-724d-4e33-9642-88328f141cbb)
+![Ekran görüntüsü 2024-07-17 144848](https://github.com/user-attachments/assets/4d1fe5f6-2dc5-4000-a72a-823d08ca776f)
