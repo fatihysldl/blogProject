@@ -30,3 +30,4 @@ Bu proje, kullanıcıların yemek tariflerini keşfetmelerini ve paylaşmaların
 ![user Anasayfa](https://github.com/user-attachments/assets/2eeddc47-8f93-4762-932f-cb0e1fb24c79)
 ![Ekran görüntüsü 2024-07-17 144750](https://github.com/user-attachments/assets/9f4b5572-724d-4e33-9642-88328f141cbb)
 ![Ekran görüntüsü 2024-07-17 144848](https://github.com/user-attachments/assets/4d1fe5f6-2dc5-4000-a72a-823d08ca776f)
+![visual](https://github.com/user-attachments/assets/e3cd5220-032c-4577-9e45-7529faf37662)
